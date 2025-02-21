@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<title>Page Title</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="./styles.css"> <!-- changed href to link css file -->
-<style>
-</style>
-<script src=""></script>
+    <head>
+        <meta charset="UTF-8">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
 <body>
+    
 
-<img src="img_la.jpg" alt="LA" style="width:100%">
-
-<div class="">
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
-    <p>This is another paragraph.</p>
+<div class="flex-vertical">
+    <img src="https://clubs-cu.s3.amazonaws.com/Spectator+Publishing+Logo.png" alt="Spectator Logo" class="logo">
+    <h1>Spectator's Sources</h1>
+    <div class="search-container"> <!-- all material -->
+        <div class="source-container">
+            <h2>Source Name:</h2>
+            <div class="input-field"></div>
+        </div>
+        
+        <div class="source-container">
+            <h2>Source Email:</h2>
+            <div class="input-field"></div>
+        </div>
+        <button class="add-button">
+            ADD
+        </button>
+    </div>
+        <!-- entries -->
+        <div class="entry">
+            <h1>1</h1>
+            <h1>Presbo</h1>
+            <h3>presbo@columbia.edu</h3>
+            <button class="delete-button">
+                DELETE
+            </button>
+        </div>
+        <div class="entry">
+            <h1>2</h1>
+            <h1>John Jay Mouse</h1>
+            <h3>mouse@columbia.edu</h3>
+            <button class="delete-button">
+                DELETE
+            </button>
+        </div>
+        <div class="entry">
+            <h1>1</h1>
+            <h1>Water Bottle Man</h1>
+            <h3>flipper@columbia.edu</h3>
+            <button class="delete-button">
+                DELETE
+            </button>
+        </div>
+    </div>
 </div>
 
 </body>

@@ -1,0 +1,84 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F1F1F1;
+    padding: 10px;
+    gap: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #36476D;
+    font-weight: 700;
+}
+
+h2 {
+    text-align: left;
+    color: white;
+}
+
+h3 {
+    text-align: left;
+    font-weight: 400;
+    color: #36476D;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 263px;
+    height: auto;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #AFD7FA;
+    border-radius: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border: 1px solid black;
+}
+
+.source-container {
+    display: flex;
+    flex-direction: space-between;
+}
+
+.input-field {
+    width: 200px; 
+    height: 30px; 
+    background-color: white; 
+}
+
+.add-button {
+    background-color: #56C854;
+    color: white;
+    border: none; 
+    outline: none; 
+    border-radius: 20px;
+}
+
+.delete-button {
+    background-color: #FF7676;
+    color: white;
+    border: none; 
+    outline: none; 
+    border-radius: 20px;
+}
+
+.entry {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
