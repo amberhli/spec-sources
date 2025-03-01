@@ -2,7 +2,6 @@ import React from 'react';
 import Banner from './Banner';
 import Input from './Input';
 import List from './List';
-import './App.css';
 
 function App() {
   return (
