@@ -36,13 +36,15 @@ const Header2 = styled.a`
     font-size: 1.25rem;
 `;
 
-const InputField = styled.div`
+const InputField = styled.input`
     flex-grow: 1;
     height: 30px; 
     background-color: white; 
     padding: 0.5rem;
     margin-left: 1rem;
     margin-right: 3rem;
+    outline: none;
+    border: none;
 `;
 
 const AddButton = styled.button`

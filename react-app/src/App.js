@@ -5,7 +5,7 @@ import List from './List';
 
 function App() {
   return (
-    <div>
+    <div style={{ backgroundColor: "#F1F1F1", fontFamily: "'Poppins', sans-serif" }}>
       <Banner />
       <Input />
       <List />
