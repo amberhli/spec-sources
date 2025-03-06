@@ -7,7 +7,7 @@ const Container = styled.div`
     padding-bottom: 2rem;
 `;
 
-const Entries = styled.div`
+const EntryContainer = styled.div`
     display: flex;
     flex-direction: column;
 `;
@@ -65,38 +65,27 @@ const DeleteButton = styled.button`
     margin-left: auto;
     white-space: nowrap;
 `;
-const List = () => {
+const List = ({ source, setSource }) => {
+
+    const deleteSource = (index) => {
+        setSource(source.filter((_, i) => i !== index));
+    };
+
     return (
-      <>
         <Container>
-            <Entries>
-                <Entry>
-                    <Number>1</Number>
-                    <Name>Presbo</Name>
-                    <Email>presbo@columbia.edu</Email>
-                    <DeleteButton>
-                        DELETE
-                    </DeleteButton>
-                </Entry>
-                <Entry>
-                    <Number>2</Number>
-                    <Name>John Jay Mouse</Name>
-                    <Email>mouse@columbia.edu</Email>
-                    <DeleteButton>
-                        DELETE
-                    </DeleteButton>
-                </Entry>
-                <Entry>
-                    <Number>1</Number>
-                    <Name>Water Bottle Man</Name>
-                    <Email>flipper@columbia.edu</Email>
-                    <DeleteButton>
-                        DELETE
-                    </DeleteButton>
-                </Entry>
-            </Entries>
+            <EntryContainer>
+                {source.map((source, index) => (
+                    <Entry key={index}>
+                        <Number>{index + 1}</Number>
+                        <Name>{source.name}</Name>
+                        <Email>{source.email}</Email>
+                        <DeleteButton onClick={() => deleteSource(index)}>
+                            DELETE
+                        </DeleteButton>
+                    </Entry>
+                ))};
+            </EntryContainer>
         </Container>
-      </>
     );
 };
   

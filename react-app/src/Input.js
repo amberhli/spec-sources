@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -60,7 +60,19 @@ const AddButton = styled.button`
     white-space: nowrap;
 `;
 
-const Input = () => {
+const Input = ({ source, setSource }) => {
+    const[name, setName] = useState("");
+    const[email, setEmail] = useState("");
+
+    const addSource = () => {
+        if(name.trim() && email.trim()){ // does this handle empty string?
+          setSource([...source, {name, email}]); // append to end of list
+          setName("");
+          setEmail("");
+          console.log(source);
+        }
+    };
+
     return (
       <>
         <Container>
@@ -69,15 +81,25 @@ const Input = () => {
                     <Header2>   
                         Source Name:
                     </Header2>
-                    <InputField></InputField>
+                    <InputField
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                    ></InputField>
                 </SourceContainer>
                 <SourceContainer>
                     <Header2>   
                         Source Email:
                     </Header2>
-                    <InputField></InputField>
+                    <InputField
+                        type="text"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    ></InputField>
                 </SourceContainer>
-                <AddButton>ADD</AddButton>
+                <AddButton onClick={addSource}>
+                    ADD
+                </AddButton>
             </SearchContainer>
         </Container>
       </>
